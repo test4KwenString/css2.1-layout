@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>三列布局-1</title>
+    <link href="base.css" rel="stylesheet">
+    <link href="triple-1.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h2>三列布局</h2>
+      <ol>
+        <li>一个容器内布局三列: 中部、左侧、右侧</li>
+        <li>左侧和右侧定宽，中部自适应</li>
+        <li>容器高度适应三列最高者</li>
+        <li>优先布局中部</li>
+      </ol>
+    </header>
+
+    <main class="triple-wrapper">
+    <article class="article">
+  <p> HTML 创建一个 wrapper 包含三列，设定 {overflow: auto} 使自适应其中非绝对定位元素的高度 </p>
+  <p>设定三列均 {float: left; position: relative;} relative用于浮动后再进行偏移。 </p>
+  <p> 设定中部宽度为 100% , 可以看到中部占满，「左侧」和「右侧」左浮动排列在下 容器被自然撑开。 </p>
+  <p> 设定「左侧」宽度，假设为200px，那么通过设定 margin-left 为 -100% 使其紧贴容器左侧，发现覆盖了中部内容，于是设置 wrapper 容器 padding 腾出空间。 </p>
+  <p> 先设置 wrapper 容器 的左内边距，发现「左侧」其实紧贴中部内容左侧，于是设置 left: -200px 令其相对当前位置左偏移。</p><p>「右侧」布局同理。至此，布局完成。</p>
+  <p> 为了实验效果显示上的便利，可为 wrapper 容器设置淡色的背景和边框以及外边距。</p>
+  <p> 其中三列可以设置淡色的1em的内边距和边框</p>
+    <p>------------------------------补----------------------------</p>
+    <p>因为要用padding 和 border 示界，所以必须设定通配选择器 box-sizing: border-box</p>
+    </article>
+    <section class="sub">
+      <nav class="nav">
+        <h2>
+          Outline
+        </h2>
+        <hr>
+        <ul>
+          <li>Home</li>
+          <li>Archive</li>
+          <li>History</li>
+          <li>About</li>
+          <li>Link</li>
+          <li>Home</li>
+          <li>Archive</li>
+          <li>History</li>
+          <li>About</li>
+          <li>Link</li>
+          <li>Home</li>
+          <li>Archive</li>
+          <li>History</li>
+          <li>About</li>
+          <li>Link</li>
+        </ul>
+      </nav>
+    </section>
+    <aside class="aside">
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </aside>
+    </main>
+
+    <footer>
+      <p>布局总结: (全左浮动 +  负margin + 相对定位)</p>
+      <div class="btngrp">
+        <a class="btn" href="triple-2.html"> Next </a>
+      </div>
+    </footer>
+</body>
+</html>

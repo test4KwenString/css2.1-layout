@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+  display: block;
+  margin: 10px;
+  overflow: hidden;/*仅调整 overflow hidden 和 auto 在这里没有影响，但是删掉此规则高度塌陷*/
+  border: 10px solid lightsalmon;
+  background-color: lightgoldenrodyellow;
+}
+
+header {
+    background-color: #f4f1f6;
+}
+
+header>ol {
+    width: 300px;
+    margin: 0 auto;
+}
+header>h2 {
+    color: #4484b4;
+    font-weight: 400;
+    text-align: center;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+    background-color: #f4f1f6;
+    /* width: 100%; *//* 这里的width 100% 让 footer 右侧无限生长 */
+    font-family: "Helvetica Neue", ans-serif;
+    border: 10px solid aquamarine;
+    padding: 1em;
+}
+
+footer .btn {
+     display: inline-block;
+}
+
+
+.main-wrapper,
+.sub,
+.aside {
+  float: left;
+}
+
+.main-wrapper {
+     width: 100%;
+     border: 4px dotted lightgray;
+}
+
+
+.article {
+  margin: 0 200px 0 200px;
+  padding: 1em;
+  border: 1em solid skyblue;
+  min-width: 300px;
+  font-family: monospace;
+}
+
+.article p {
+     margin-bottom: 0.5em;
+}
+.article p:before {
+    content: '¡';
+    padding-left: 1em;
+}
+
+.sub {
+  width: 200px;
+  margin-left: -100%;
+  padding: 1em;
+  border: 1em dotted pink;
+}
+
+.aside {
+  width: 200px;
+  margin-left: -200px;
+  padding: 1em;
+  border: 1em dashed peachpuff;
+}
+

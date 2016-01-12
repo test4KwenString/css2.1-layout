@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { background-color: transparent;  }
+a:active,
+a:hover { outline: 0; }
+a:link { text-decoration: none; }
+
+
+hr {
+    height: 0;
+    box-sizing: content-box;
+}
+
+.btngrp {
+    text-align: center;
+    padding: 1em 0;
+}
+.btn {
+    background: deeppink;
+    color: white;
+    border-radius: 0.3em;
+    padding: 0.2em 0;
+    position: relative;
+    width: 10em;
+    border: 1px solid hotpink;
+    text-shadow: 0px 2px 0 hotpink;
+}
+
